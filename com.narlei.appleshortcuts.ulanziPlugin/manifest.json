@@ -1,0 +1,42 @@
+{
+  "Name": "Apple Shortcuts",
+  "Version": "1.0.0",
+  "Author": "Narlei Moreira",
+  "Description": "Pick any Shortcut from your Mac's Shortcuts app and run it instantly from a Ulanzi Deck button.",
+  "Icon": "resources/icon.svg",
+  "Category": "Apple Shortcuts",
+  "CategoryIcon": "resources/icon.svg",
+  "URL": "https://github.com/narlei/ulanzideck-apple-shortcuts",
+  "CodePath": "app.js",
+  "Type": "JavaScript",
+  "PrivateAPI": true,
+  "SupportedInMultiActions": false,
+  "UUID": "com.narlei.appleshortcuts.plugin",
+  "Actions": [
+    {
+      "Name": "Run Shortcut",
+      "Tooltip": "Runs the selected Shortcut. Pick it in the Property Inspector.",
+      "Icon": "resources/icon.svg",
+      "PropertyInspectorPath": "property-inspector/inspector.html",
+      "UUID": "com.narlei.appleshortcuts.plugin.run",
+      "States": [
+        {
+          "Image": "resources/icon.svg"
+        }
+      ],
+      "SupportedInMultiActions": false,
+      "Controllers": [
+        "Keypad"
+      ]
+    }
+  ],
+  "OS": [
+    {
+      "Platform": "mac",
+      "MinVersion": "12.0"
+    }
+  ],
+  "Software": {
+    "MinVersion": "1.0.0"
+  }
+}

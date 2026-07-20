@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#221847"/>
+      <stop offset="1" stop-color="#0B0620"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.42" r="0.72">
+      <stop offset="0" stop-color="#8A5CFF" stop-opacity="0.42"/>
+      <stop offset="1" stop-color="#8A5CFF" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="front" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#3FB6FF"/>
+      <stop offset="0.5" stop-color="#7452FF"/>
+      <stop offset="1" stop-color="#FF4FAE"/>
+    </linearGradient>
+    <linearGradient id="hl" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.3"/>
+      <stop offset="0.5" stop-color="#FFFFFF" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="200" height="200" rx="44" fill="url(#bg)"/>
+  <rect width="200" height="200" rx="44" fill="url(#glow)"/>
+
+  <!-- ambient sparkles -->
+  <path d="M158 40 l3.2 8.3 8.3 3.2 -8.3 3.2 -3.2 8.3 -3.2 -8.3 -8.3 -3.2 8.3 -3.2 z" fill="#C9BAFF" fill-opacity="0.85"/>
+  <circle cx="42" cy="146" r="2.6" fill="#C9BAFF" fill-opacity="0.45"/>
+  <circle cx="34" cy="58" r="1.8" fill="#C9BAFF" fill-opacity="0.3"/>
+
+  <!-- back diamond (translucent layer peeking below) -->
+  <rect x="64" y="66" width="72" height="72" rx="20" transform="rotate(45 100 102)" fill="#FFFFFF" opacity="0.16"/>
+
+  <!-- front diamond with vivid gradient + top-light highlight -->
+  <rect x="64" y="38" width="72" height="72" rx="20" transform="rotate(45 100 74)" fill="url(#front)"/>
+  <rect x="64" y="38" width="72" height="72" rx="20" transform="rotate(45 100 74)" fill="url(#hl)"/>
+</svg>
