@@ -1,6 +1,6 @@
 {
   "Name": "Apple Shortcuts",
-  "Version": "1.0.0",
+  "Version": "1.0.1",
   "Author": "Narlei Moreira",
   "Description": "Pick any Shortcut from your Mac's Shortcuts app and run it instantly from a Ulanzi Deck button.",
   "Icon": "resources/icon.svg",
