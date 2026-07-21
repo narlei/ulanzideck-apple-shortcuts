@@ -119,8 +119,11 @@ function ensureIconFetch(shortcutId) {
 function renderInstance(inst) {
   if (!inst.active) return;
   const { shortcutId, shortcutName } = inst.settings || {};
+  // The generic artwork goes out by state index rather than by path: index 0 is
+  // the slot the key's own image picker in Ulanzi Studio edits, so a custom
+  // image set there survives. A shortcut's own icon still wins over both.
   if (!shortcutId) {
-    $UD.setPathIcon(inst.context, 'resources/icon.svg', '');
+    $UD.setStateIcon(inst.context, 0, '');
     return;
   }
   const cached = ICON_CACHE.get(shortcutId);
@@ -130,7 +133,7 @@ function renderInstance(inst) {
   }
   // Not cached (yet, or the fetch failed) — fall back to the generic icon
   // with the shortcut's name on it, and kick off a background fetch.
-  $UD.setPathIcon(inst.context, 'resources/icon.svg', shortcutName || '');
+  $UD.setStateIcon(inst.context, 0, shortcutName || '');
   ensureIconFetch(shortcutId);
 }
 
